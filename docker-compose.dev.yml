@@ -1,0 +1,16 @@
+services:
+  web:
+    command: flask run --host 0.0.0.0
+    volumes:
+      - ./backend/webapp:/app
+    env_file:
+      - ./.env.dev
+  
+  db:
+    volumes:
+      - postgres_data_dev:/var/lib/postgres/data/
+    env_file:
+      - ./.env.dev.db
+
+volumes:
+  postgres_data_dev:

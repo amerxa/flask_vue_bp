@@ -1,0 +1,7 @@
+.vscode
+venv
+.env.dev
+.env.dev.db
+.env.prod
+.env.prod.db
+migrations

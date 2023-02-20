@@ -1,0 +1,14 @@
+services:
+  web:
+    command: gunicorn --bind 0.0.0.0:5000 "app:create_app()"
+    env_file:
+      - ./.env.prod
+  
+  db:
+    volumes:
+      - postgres_data_prod:/var/lib/postgres/data/
+    env_file:
+      - ./.env.prod.db
+
+volumes:
+  postgres_data_prod:
