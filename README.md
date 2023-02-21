@@ -16,7 +16,7 @@ This repo is under development. It's meant to serve as a boilerplate for Flask+V
 3. add `.env.dev` file to the root of the repo and define the environment variables found in `.env.sample`.
 4. at the root of the repo, execute following docker compose command:
   ```
-  docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+  docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
   ```
 5. browse to `http://localhost:5000/api/swagger-ui` to view the swagger documentation of the API.
 6. on the created 'web' container, execute the DB migration commands (won't be required for prod):
