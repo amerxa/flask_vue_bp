@@ -5,3 +5,4 @@ venv
 .env.prod
 .env.prod.db
 migrations
+backend/webapp/sample.py
