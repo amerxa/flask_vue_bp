@@ -27,7 +27,7 @@ class UserRegister(MethodView):
             db.session.commit()
         except IntegrityError:
             abort(HTTPStatus.CONFLICT.value,
-                  message="A user with that usernamne or email already exists.")
+                  message="A user with that email already exists.")
         except SQLAlchemyError:
             abort(HTTPStatus.INTERNAL_SERVER_ERROR.value,
                   message="An error occurred while adding the user.")

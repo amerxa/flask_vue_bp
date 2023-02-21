@@ -3,6 +3,9 @@ from .custom_fields import PasswordField
 
 
 class UserSchema(Schema):
+    class Meta:
+        ordered = True
+
     id = fields.Int(dump_only=True)
     email = fields.Email(required=True, validate=validate.Length(max=255))
     password = PasswordField(required=True, load_only=True)

@@ -10,6 +10,7 @@ from resources.user import blp as UserBlueprint
 
 def configure_app(app: Flask) -> None:
     app.config["PROPAGATE_EXCEPTIONS"] = True
+    app.config["JSON_SORT_KEYS"] = False
     app.config["API_TITLE"] = "Flask Vue Boilerplate"
     app.config["API_VERSION"] = "v1"
     app.config["OPENAPI_VERSION"] = "3.0.3"
